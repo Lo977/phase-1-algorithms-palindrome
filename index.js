@@ -1,9 +1,15 @@
-function isPalindrome(word) {
-  let words = word.toLowerCase();
-  let reversed = [...words].reverse().join("");
-  return words === reversed;
+function reverseWord(word) {
+  let reverseWord = "";
+  for (let i = word.length - 1; i >= 0; i--) {
+    reverseWord += word[i];
+  }
+  return reverseWord.toLowerCase();
 }
-console.log(isPalindrome("Racecar"));
+
+function isPalindrome(word) {
+  return word.toLowerCase() === reverseWord(word);
+}
+// console.log(isPalindrome("Racecar"));
 
 /* 
   - the strings into lowecase.
