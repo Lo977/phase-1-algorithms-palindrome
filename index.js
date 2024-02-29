@@ -1,9 +1,15 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  let words = word.toLowerCase();
+  let reversed = [...words].reverse().join("");
+  return words === reversed;
 }
+console.log(isPalindrome("Racecar"));
 
 /* 
-  Add your pseudocode here
+  - the strings into lowecase.
+  -grab each charectors  of strings into an Array, reverse ,join and assign it to new variable.
+  - chech if the word and new variable are the same
+
 */
 
 /*
